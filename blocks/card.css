@@ -6,25 +6,32 @@
   border-radius: 8px;
 }
 .card__title {
-  margin: 12px 0 4px;
+  margin: 12px 0 0;
   height: 24px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 320px;
+  max-width: 119px;
+  color: #212121;
 }
 .card__like-btn {
   background-image: url(../images/heart.svg);
   width: 23px;
   height: 20px;
-  border: none;
-  background-color: transparent;
+  border: 2px;
   opacity: 40%;
+  padding: 0;
+}
+.card__like-btn:hover {
+  width: 23;
+  height: 20;
+  top: 20px;
+  left: 65px;
+  background-image: url(../images/State=Hover.svg);
 }
 .card__content {
   display: flex;
@@ -34,9 +41,15 @@
 @media screen and (max-width: 764px) {
   .card__image {
     height: 288px;
-    border-radius: 8px;
   }
   .card__title {
-    margin: 12px 0 4px;
+    font-size: 16px;
+    line-height: 100%;
+    max-width: 95px;
+    height: 16px;
+  }
+  .card__like-btn {
+    width: 20px;
+    height: 18px;
   }
 }

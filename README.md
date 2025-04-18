@@ -21,4 +21,4 @@ This is the third project of the Software Engineering program at TripleTen. It w
 
 **Figma**
 
-- [Link to the project on Figma](https://github.com/dicmora/se_project_spots)
+- Link to the project presentation video: https://drive.google.com/file/d/136AudqfdyIjW_7VyOTXsMjefmXwtmsi7/view?usp=drive_link

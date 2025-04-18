@@ -9,6 +9,7 @@
     <meta name="keywords" content="" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./pages/index.css" />
+    `
   </head>
   <body>
     <div class="page">
@@ -25,7 +26,7 @@
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <button class="profile__edit-btn">
+            <button type="button" class="profile__edit-btn">
               <img
                 src="./images/pencil.svg"
                 class=".profile__btn-img"
@@ -33,8 +34,13 @@
               /><span class="profile__btn-text">Edit Profile</span>
             </button>
           </div>
-          <button class="profile__add-btn">
-            <img src="./images/plus.svg" alt="Plus icon" />New Post
+          <button type="button" class="profile__add-btn">
+            <img
+              src="./images/plus.svg"
+              alt="Plus icon"
+              class="profile__add-btn-icon"
+              *
+            />New Post
           </button>
         </section>
         <section class="cards">
@@ -47,7 +53,7 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Val Thorens</h2>
-                <button class="card__like-btn"></button>
+                <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
@@ -58,7 +64,7 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Restaurant terrace</h2>
-                <button class="card__like-btn"></button>
+                <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
@@ -69,7 +75,7 @@
               />
               <div class="card__content">
                 <h2 class="card__title">An out door cafe</h2>
-                <button class="card__like-btn"></button>
+                <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
@@ -80,7 +86,7 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Very long bridge, over the forest</h2>
-                <button class="card__like-btn"></button>
+                <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
@@ -91,7 +97,7 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Tunnel with morning light</h2>
-                <button class="card__like-btn"></button>
+                <button type="button" class="card__like-btn"></button>
               </div>
             </li>
             <li class="card">
@@ -102,7 +108,7 @@
               />
               <div class="card__content">
                 <h2 class="card__title">Mountain house</h2>
-                <button class="card__like-btn"></button>
+                <button type="button" class="card__like-btn"></button>
               </div>
             </li>
           </ul>

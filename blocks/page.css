@@ -1,5 +1,5 @@
 .page {
-  max-width: 1440px;
+  max-width: 1440px; /* I tried changing this to 1280px and only created 2 columns instead of 3. If yes I will.*/
   margin: 0 auto;
   background-color: #fcf5e5;
   min-height: 100vh;
