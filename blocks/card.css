@@ -15,7 +15,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 119px;
+  max-width: 334px;
   color: #212121;
 }
 .card__like-btn {
@@ -23,16 +23,17 @@
   width: 23px;
   height: 20px;
   border: 2px;
-  opacity: 40%;
+  opacity: 0.4;
   padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s ease;
 }
+
 .card__like-btn:hover {
-  width: 23;
-  height: 20;
-  top: 20px;
-  left: 65px;
-  background-image: url(../images/State=Hover.svg);
+  opacity: 1;
 }
+
 .card__content {
   display: flex;
   justify-content: space-between;
