@@ -18,6 +18,12 @@
   max-width: 334px;
   color: #212121;
 }
+.card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px 0;
+}
 .card__like-btn {
   background-image: url(../images/heart.svg);
   width: 23px;
@@ -34,11 +40,6 @@
   opacity: 1;
 }
 
-.card__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 @media screen and (max-width: 764px) {
   .card__image {
     height: 288px;
@@ -46,7 +47,7 @@
   .card__title {
     font-size: 16px;
     line-height: 100%;
-    max-width: 95px;
+    max-width: 340px;
     height: 16px;
   }
   .card__like-btn {

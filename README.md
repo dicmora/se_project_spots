@@ -18,7 +18,7 @@ This is the third project of the Software Engineering program at TripleTen. It w
 ## Pictures and Images Used
 
 - Svg
+  **Figma**
 
-**Figma**
-
+- Link to gethub page: https://dicmora.github.io/se_project_spots/
 - Link to the project presentation video: https://drive.google.com/file/d/136AudqfdyIjW_7VyOTXsMjefmXwtmsi7/view?usp=drive_link

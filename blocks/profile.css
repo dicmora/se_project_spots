@@ -24,15 +24,17 @@
   line-height: 100%;
 }
 
+.profile__add-btn:hover {
+  background-color: #212121cc;
+  cursor: pointer;
+}
 .profile__add-btn-icon {
   margin: 0;
   width: 12px;
   height: 12px;
   border-width: 2px;
 }
-.profile__add-btn:hover {
-  background-color: #212121cc;
-}
+
 .profile__section {
   max-width: 1280px;
   margin: 0 auto;
@@ -69,33 +71,36 @@
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121b2;
+  font-weight: 500;
 }
 .profile__edit-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: auto;
-  width: 107.34px;
-  height: 16px;
+  justify-content: flex-start;
+  margin-top: 16px;
   gap: 8px;
   opacity: 0.7;
   border: none;
-  background: none;
+  background: transparent;
+  padding: 0;
+  margin-top: auto;
 }
+
 .profile__edit-btn-text {
-  margin: 0;
   text-align: center;
   font-size: 16px;
   line-height: 1;
   display: inline-block;
   white-space: nowrap;
+  font-weight: 500;
 }
 .profile__edit-btn:hover .profile__edit-btn-text {
   color: #212121;
+  cursor: pointer;
 }
 .profile__btn-img {
-  width: 18.5;+
-  height: 3.2;
+  width: 16px;
+  height: 16px;
   display: block;
   color: #212121;
 }
@@ -117,7 +122,6 @@
     margin-left: 0;
     height: 80px;
     width: 80px;
-    padding-top: 20px;
     margin: 0 0 12px;
   }
   .profile__description {
