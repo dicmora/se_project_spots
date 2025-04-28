@@ -113,7 +113,42 @@
             </li>
           </ul>
         </section>
+        <div class="modal modal_is-opened">
+          <div class="modal__container">
+            <button type="button" class="modal__close-btn">X</button> 
+            <h2 class="modal__title modal__title-text">Edit Profile</h2>
+            <form class="modal__form" name="edit-profile">
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input id="profile-name-input" type="text" name="edit-profile" class="modal__input" placeholder="Type your name">
+            </label>
+            <label for="profile-description-input" class="modal__label">
+              Description
+              <input id="profile-description-input" type="text" name="edit-profile" class="modal__input" placeholder="Describe yourself">
+            </label>
+            <button type="submit" class="modal__submit-btn modal__submit-btn-text">Save</button>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal_is-opened">
+          <div class="modal__container">
+            <button type="button" class="modal__close-btn">X</button> 
+            <h2 class="modal__title modal__title-text">New Post</h2>
+            <form class="modal__form" name="edit-profile">
+            <label for="card-image-input" class="modal__label">
+              Image link
+              <input id="card-image-input" type="url" name="edit-profile" class="modal__input" placeholder="Place the link to the picture">
+            </label>
+            <label for="card-caption-input" class="modal__label">
+              Caption
+              <input id="card-caption-input" type="text" name="edit-profile" class="modal__input" placeholder="Type your caption">
+            </label>
+            <button type="submit" class="modal__submit-btn modal__submit-btn-text">Save</button>
+            </form>
+          </div>
+        </div>
       </main>
+      </div>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2025 Spots</p>
       </footer>
