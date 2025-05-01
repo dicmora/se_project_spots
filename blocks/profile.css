@@ -1,4 +1,6 @@
 .profile {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
@@ -35,10 +37,6 @@
   border-width: 2px;
 }
 
-.profile__section {
-  max-width: 1280px;
-  margin: 0 auto;
-}
 .profile__avatar {
   margin-left: 0;
   width: 190px;
