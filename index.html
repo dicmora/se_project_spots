@@ -30,7 +30,8 @@
                 src="./images/pencil.svg"
                 class="profile__btn-img"
                 alt="Pencil icon"
-              /><span class="profile__edit-btn-text">Edit Profile</span>
+              />
+              <span class="profile__edit-btn-text">Edit Profile</span>
             </button>
           </div>
           <button type="button" class="profile__add-btn">
@@ -38,7 +39,8 @@
               src="./images/plus.svg"
               alt="Plus icon"
               class="profile__add-btn-icon"
-            />New Post
+            />
+            New Post
           </button>
         </section>
         <section class="cards">
@@ -116,8 +118,9 @@
         <footer class="footer">
           <p class="footer__copyright">&copy; 2025 Spots</p>
         </footer>
-      </div>
+      </main>
     </div>
+
     <div class="modal" id="edit-profile-modal">
       <div class="modal__container">
         <button type="button" class="modal__close-btn"></button>
@@ -130,7 +133,9 @@
               type="text"
               name="edit-profile"
               class="modal__input"
-              placeholder="Type your name" required />
+              placeholder="Type your name"
+              required
+            />
           </label>
           <label for="profile-description-input" class="modal__label">
             Description
@@ -139,18 +144,15 @@
               type="text"
               name="edit-profile"
               class="modal__input"
-              placeholder="Describe yourself" required
+              placeholder="Describe yourself"
+              required
             />
           </label>
-          <button
-            type="submit"
-            class="modal__submit-btn"
-          >
-            Save
-          </button>
+          <button type="submit" class="modal__submit-btn">Save</button>
         </form>
       </div>
     </div>
+
     <div class="modal" id="new-post-modal">
       <div class="modal__container">
         <button type="button" class="modal__close-btn"></button>
@@ -163,7 +165,8 @@
               type="url"
               name="add-newPost"
               class="modal__input"
-              placeholder="Place the link to the picture" required
+              placeholder="Place the link to the picture"
+              required
             />
           </label>
           <label for="card-caption-input" class="modal__label">
@@ -173,20 +176,15 @@
               type="text"
               name="add-newPost"
               class="modal__input"
-              placeholder="Type your caption" required
+              placeholder="Type your caption"
+              required
             />
           </label>
-          <button
-            type="submit"
-            class="modal__submit-btn"
-          >
-            Save
-          </button>
+          <button type="submit" class="modal__submit-btn">Save</button>
         </form>
       </div>
     </div>
-  </main>
-  <div>
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>
