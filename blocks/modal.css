@@ -144,13 +144,14 @@
   line-height: 120%;
   color: #ffffff;
   background-color: #212121;
+  overflow-wrap: break-word;
   display: inline-block;
   text-align: center;
   margin-top: 8px;
   padding: 4px 8px;
   border-radius: 8px;
   max-width: 100%;
-  word-wrap: break-word;
+  word-break: break-word;
 }
 .modal__Previewclose-btn {
   background-image: url("../images/closePreviewbtn.svg");

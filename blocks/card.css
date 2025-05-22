@@ -51,7 +51,7 @@
   border: 2px;
   opacity: 0.4;
   padding: 0;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: opacity 0.3s ease;
 }
@@ -63,6 +63,7 @@
 
 .card__like-btn_active {
   background-image: url("../images/LikedImage.svg");
+  mix-blend-mode: multiply;
   opacity: 1;
 }
 .card__like-btn_active:hover {
@@ -75,7 +76,7 @@
   .card__title {
     font-size: 16px;
     line-height: 100%;
-    max-width: 340px;
+    max-width: 250px;
     height: 16px;
   }
   .card__like-btn {
