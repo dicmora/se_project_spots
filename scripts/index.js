@@ -57,6 +57,8 @@ const newPostInput = newPostModal.querySelector("#card-caption-input");
 const postLinkInput = newPostModal.querySelector("#card-image-input");
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
+const newPostSubmitButton =
+  newPostFormElement.querySelector(".modal__submit-btn");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -106,6 +108,13 @@ function closeModal(modal) {
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
   editProfileDescription.value = profileDescriptionElement.textContent;
+
+  resetValidation(
+    profileFormElement,
+    [editProfileNameInput, editProfileDescription],
+    settings
+  );
+
   openModal(editProfileModal);
 });
 
@@ -122,11 +131,8 @@ newPostCloseBtn.addEventListener("click", function () {
 });
 
 function handleProfileFormSubmit(evt) {
-  // Prevent default browser behavior.
   evt.preventDefault();
 
-  // Insert these new values into the textContent
-  // property of the corresponding profile elements.
   profileNameElement.textContent = editProfileNameInput.value;
   profileDescriptionElement.textContent = editProfileDescription.value;
 
@@ -147,6 +153,9 @@ function handleNewPostSubmit(evt) {
   const newCard = getCardElement(newPost);
   cardList.prepend(newCard);
   newPostFormElement.reset();
+
+  disableButton(newPostSubmitButton, settings);
+  enableButton(newPostSubmitButton);
   closeModal(newPostModal);
 }
 
