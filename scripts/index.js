@@ -155,7 +155,6 @@ function handleNewPostSubmit(evt) {
   newPostFormElement.reset();
 
   disableButton(newPostSubmitButton, settings);
-  enableButton(newPostSubmitButton);
   closeModal(newPostModal);
 }
 
