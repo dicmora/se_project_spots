@@ -4,7 +4,7 @@ const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__button_disabled",
+  inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible",
 };
@@ -24,8 +24,6 @@ const hideInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   inputElement.classList.remove(config.inputErrorClass);
   errorElement.textContent = "";
-  errorElement.classList.remove(config.errorClass);
-
   errorElement.classList.remove(config.errorClass);
 };
 
@@ -80,7 +78,6 @@ const setEventListeners = (formElement, config) => {
 
   toggleButtonState(inputList, buttonElement, config);
 
-  console.log(inputList);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement, config);
@@ -96,5 +93,4 @@ function enableValidation(config) {
   });
 }
 
-// Passing the configuration object to enableValidation when we call it.
 enableValidation(settings);

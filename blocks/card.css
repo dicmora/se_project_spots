@@ -9,6 +9,9 @@
   display: block;
   border-radius: 8px;
 }
+.card__image:hover {
+  cursor: pointer;
+}
 .card__title {
   margin: 12px 0 0;
   height: 24px;
@@ -42,6 +45,7 @@
 }
 .card__del-btn:hover {
   background-image: url("../images/deleteHover.svg");
+  cursor: pointer;
 }
 .card__like-btn {
   background-image: url(../images/heart.svg);
