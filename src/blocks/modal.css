@@ -43,6 +43,27 @@
   opacity: 1;
 }
 
+.modal_type_delete .modal__close-btn {
+  position: absolute;
+  top: 0px;
+  right: -50px;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  background-image: url("../images/CloseDelete.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.6s ease;
+}
+
+.modal_type_delete .modal__close-btn:hover {
+  opacity: 1;
+}
+
 .modal__title {
   margin-top: 0;
   margin-bottom: 32px;
@@ -147,6 +168,42 @@
   opacity: 0.6;
   transition: background-color 0.3s, opacity 0.3s;
 }
+.modal_type_delete .modal__title {
+  color: #212121;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-style: Medium;
+  font-size: 24px;
+  text-align: center;
+}
+
+.modal__form_type_delete {
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.modal__submit-btn_type_delete {
+  background-color: #ff6565;
+  color: #212121;
+  width: 156;
+  height: 52;
+  opacity: 1;
+  padding-top: 18px;
+  padding-right: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.modal__submit-btn_type_cancel {
+  background-color: #fff;
+  color: #212121;
+  width: 156px;
+  height: 52px;
+  opacity: 1;
+  border: 1px solid #212121;
+}
+
 .modal__image-container {
   position: relative;
 }
@@ -196,7 +253,46 @@
     margin: 0;
     padding: 0;
   }
+  .modal__container {
+    max-width: 300px;
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
+  }
 
+  .modal__form_type_delete {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .modal_type_delete .modal__title {
+    font-size: 20px;
+    padding: 0 12px;
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .modal__submit-btn_type_delete,
+  .modal__submit-btn_type_cancel {
+    width: 156px;
+    height: 52px;
+    padding: 18px 32px;
+    margin: 0 auto;
+  }
+
+  .modal_type_delete .modal__close-btn {
+    top: -50px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+    z-index: 10;
+  }
   .modal__title {
     font-size: 20px;
     padding-top: 10px;
