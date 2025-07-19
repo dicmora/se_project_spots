@@ -21,7 +21,7 @@ import "../blocks/page.css";
 import "../blocks/profile.css";
 import "../pages/index.css";
 import Api from "../utils/Api.js";
-import { setButtonText } from "../utils/helpers.js";
+import { handleSubmitWithLoading, setButtonText } from "../utils/helpers.js";
 
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
@@ -147,6 +147,7 @@ function handleLike(cardId, likeBtn, api) {
       console.error(err);
     });
 }
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -198,22 +199,21 @@ function handleDeleteCard(cardElement, cardId) {
 
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
-  const deleteBtn = evt.submitter;
-  setButtonText(deleteBtn, true, "Deleting...");
-  api
-    .removeCard(selectedCardId)
-    .then((res) => {
-      alert(res.message);
-      selectedCard.remove();
-      selectedCard = null;
-      selectedCardId = null;
-      closeModal(deleteModelBtn);
-    })
-    .catch(console.error)
-    .finally(() => {
-      setButtonText(deleteBtn, false, "Deleting...");
-    });
+
+  handleSubmitWithLoading(evt, "Delete", "Deleting...", () => {
+    return api
+      .removeCard(selectedCardId)
+      .then((res) => {
+        alert(res.message);
+        selectedCard.remove();
+        selectedCard = null;
+        selectedCardId = null;
+        closeModal(deleteModelBtn);
+      })
+      .catch(console.error);
+  });
 }
+
 deleteForm.addEventListener("submit", handleDeleteSubmit);
 avatarFormElement.addEventListener("submit", handleAvatarSubmit);
 
@@ -241,53 +241,59 @@ newPostBtn.addEventListener("click", () => {
 
 profileFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  const submitBtn = evt.submitter;
-  setButtonText(submitBtn, true);
-  api
-    .editUserInfo({
-      name: editProfileNameInput.value,
-      about: editProfileDescription.value,
-    })
-    .then((data) => {
-      profileNameElement.textContent = data.name;
-      profileDescriptionElement.textContent = data.about;
 
-      closeModal(editProfileModal);
-    })
-    .catch(console.error)
-    .finally(() => {
-      setButtonText(submitBtn, false);
-    });
+  handleSubmitWithLoading(evt, "Edit", "Saving...", () => {
+    return api
+      .editUserInfo({
+        name: editProfileNameInput.value,
+        about: editProfileDescription.value,
+      })
+      .then((data) => {
+        profileNameElement.textContent = data.name;
+        profileDescriptionElement.textContent = data.about;
+        closeModal(editProfileModal);
+      })
+      .catch(console.error);
+  });
 });
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
+
   const avatarUrl = avatarInput.value.trim();
-  api
-    .editAvatarInfo({ avatar: avatarUrl })
-    .then((data) => {
-      avatarElement.src = data.avatar;
-      closeModal(avatarModal);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+
+  handleSubmitWithLoading(evt, "Update", "Saving...", () => {
+    return api
+      .editAvatarInfo({ avatar: avatarUrl })
+      .then((data) => {
+        avatarElement.src = data.avatar;
+        closeModal(avatarModal);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
 }
-newPostFormElement.addEventListener("submit", (e) => {
-  e.preventDefault();
+
+newPostFormElement.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+
   const newCard = {
     name: newPostInput.value,
     link: postLinkInput.value,
   };
-  api
-    .createCard(newCard)
-    .then((createCard) => {
-      renderCard(createCard);
-      newPostFormElement.reset();
-      disableButton(newPostSubmitButton, settings);
-      closeModal(newPostModal);
-    })
-    .catch(console.error);
+
+  handleSubmitWithLoading(evt, "Create", "Creating...", () => {
+    return api
+      .createCard(newCard)
+      .then((createCard) => {
+        renderCard(createCard);
+        newPostFormElement.reset();
+        disableButton(newPostSubmitButton, settings);
+        closeModal(newPostModal);
+      })
+      .catch(console.error);
+  });
 });
 
 enableValidation(settings);

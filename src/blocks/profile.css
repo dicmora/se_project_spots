@@ -77,6 +77,7 @@
 .profile__avatar {
   width: 190px;
   height: 190px;
+  border-radius: 8px;
 }
 
 .profile__column {
