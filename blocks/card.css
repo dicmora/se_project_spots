@@ -47,7 +47,6 @@
   background-image: url("../images/deleteHover.svg");
   cursor: pointer;
 }
-
 .card__like-btn {
   background-image: url(../images/heart.svg);
   background-color: transparent;
@@ -73,10 +72,6 @@
 }
 .card__like-btn_active:hover {
   opacity: 0.4;
-}
-
-.card_active {
-  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 @media screen and (max-width: 764px) {
   .card__image {
