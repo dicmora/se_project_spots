@@ -1,4 +1,4 @@
-# Project 3: Spots
+# Project 9: Spots
 
 ### Overview
 
@@ -22,4 +22,4 @@ https://dicmora.github.io/se_project_spots/
   **Figma**
 
 - Link to gethub page: https://dicmora.github.io/se_project_spots/
-- Link to the project presentation video: https://drive.google.com/file/d/136AudqfdyIjW_7VyOTXsMjefmXwtmsi7/view?usp=drive_link
+- Link to the project presentation video: https://youtu.be/XB8n-bQ2BpQ
